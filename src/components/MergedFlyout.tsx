@@ -304,25 +304,17 @@ const MergedFlyout: React.FC<MergedFlyoutProps> = ({ isOpen, onClose }) => {
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Risk Name
                     </label>
-                    <input
-                      type="text"
-                      value={formData.riskName}
-                      onChange={(e) => setFormData(prev => ({ ...prev, riskName: e.target.value }))}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="Enter risk name"
-                    />
+                    <div className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm text-gray-900">
+                      {formData.riskName || 'No risk name specified'}
+                    </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Risk Instance Description
                     </label>
-                    <textarea
-                      value={formData.riskInstanceDescription}
-                      onChange={(e) => setFormData(prev => ({ ...prev, riskInstanceDescription: e.target.value }))}
-                      rows={2}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 resize-none"
-                      placeholder="Enter risk instance description"
-                    />
+                    <div className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm text-gray-900 min-h-[76px]">
+                      {formData.riskInstanceDescription || 'No risk instance description specified'}
+                    </div>
                   </div>
                  <div>
   <span className="text-sm font-semibold text-gray-700">Org Node:</span>
